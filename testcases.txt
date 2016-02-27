@@ -1,0 +1,37 @@
+Input: “0700 1234 3.14159e-10”Expected output: Octal “0700”                 Decimal “1234”                 Float “3.14159e-10”Output: Octal “0700”        Decimal “1234”        Float “3.14159e-10”Input: “345r278-”Expected output: Decimal “345”
+                 [0x72] “r”
+                 Decimal “278”
+                 [0x2d] “-”Output: Decimal “345”
+        [0x72] “r”
+        Decimal “278”
+        [0x2d] “-”Input: “0x12345e5”Expected output: Hex “0x12345e5”Output: Hex “0x12345e5”
+
+Input: “7e+342-5”
+Expected output: Float “7e+342”
+                 [0x2d] “-”
+                 Decimal “5”
+Output: Float “7e+342”
+        [0x2d] “-”
+        Decimal “5”
+
+Input: “5.670x2.341”
+Expected output: Float “5.670”
+                 [0x78] “x”
+                 Float “2.341”
+Output: Float “5.670”
+        [0x78] “x”
+        Float “2.341”
+
+Input: “0Af0x345eDc-”
+Expected output: [0x30] “0”
+                 [0x41] “A”
+                 [0x66] “f”
+                 Hex “0x345eDc”
+                 [0x2d] “-”
+Output: [0x30] “0”
+        [0x41] “A”
+        [0x66] “f”
+        Hex “0x345eDc”
+        [0x2d] “-”
+                 
+            
